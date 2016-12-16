@@ -52,6 +52,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="islandmusic.apm.MainScreenActivity" />
         </activity>
+        <activity android:name=".Contribute"></activity>
     </application>
 
 </manifest>
