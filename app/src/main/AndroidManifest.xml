@@ -26,6 +26,7 @@
         <!-- ** Accepts name and sends to main activity ** -->
         <activity android:name=".StartApp" />
 
+
         <!-- ** X ** -->
         <!-- ** Gets called to display Gmap ** -->
 
