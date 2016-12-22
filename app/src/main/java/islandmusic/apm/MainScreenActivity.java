@@ -18,7 +18,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     /** Called when the user clicks the Looking button */
     public void launchLook(View view) {
-        Intent intent = new Intent(this, MapSelector.class);
+        Intent intent = new Intent(this, StartApp.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
         //intent.putExtra(EXTRA_MESSAGE, message);
@@ -28,7 +28,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     /** Called when the user clicks the Contribute button */
     public void launchCont(View view) {
-        Intent intent = new Intent(this, Contribute.class);// Intent intent = new Intent(this, Contribute.class);
+        Intent intent = new Intent(this, Contribute.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
         //intent.putExtra(EXTRA_MESSAGE, message);
@@ -38,7 +38,7 @@ public class MainScreenActivity extends AppCompatActivity {
 
     /** Called when the user clicks the About button */
     public void launchAbout(View view) {
-        Intent intent = new Intent(this, About.class);//  Intent intent = new Intent(this, About.class);
+        Intent intent = new Intent(this, StartApp.class);//  Intent intent = new Intent(this, About.class);
         //EditText editText = (EditText) findViewById(R.id.edit_message);
         //String message = editText.getText().toString();
         //intent.putExtra(EXTRA_MESSAGE, message);
