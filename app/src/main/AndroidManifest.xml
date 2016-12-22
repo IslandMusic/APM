@@ -26,7 +26,6 @@
         <!-- ** Accepts name and sends to main activity ** -->
         <activity android:name=".StartApp" />
 
-
         <!-- ** X ** -->
         <!-- ** Gets called to display Gmap ** -->
 
@@ -54,7 +53,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="islandmusic.apm.MainScreenActivity" />
         </activity>
-        <activity android:name=".Contribute"></activity>
+        <activity android:name=".Contribute" />
+        <activity android:name=".About"></activity>
     </application>
 
 </manifest>
