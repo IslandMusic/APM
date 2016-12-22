@@ -23,5 +23,5 @@
         android:id="@+id/button2"
         android:layout_weight="1"
         android:text="@string/wtim"
-        android:onClick="startApp"/>
+        android:onClick="MainScreenActivity"/>
 </RelativeLayout>

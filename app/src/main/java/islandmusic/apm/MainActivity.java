@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Called when the user clicks the Send button */
-    public void startApp(View view) {
-        Intent intent = new Intent(this, StartApp.class);
+    public void MainScreenActivity (View view) {
+        Intent intent = new Intent(this, MainScreenActivity.class);
         EditText editText = (EditText) findViewById(R.id.add_nom);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
