@@ -5,6 +5,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <service
+        android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+        android:enabled="true" />
+
     <application
         android:name="android.support.multidex.MultiDexApplication"
         android:allowBackup="true"
