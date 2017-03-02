@@ -15,5 +15,6 @@
     <string name="tmp1">temp1</string>
     <string name="wtim">Welcome to Island Music</string>
     <string name="app_start">The App is Starting…</string>
+    <string name="title_activity_maps">Map</string>
 
 </resources>
