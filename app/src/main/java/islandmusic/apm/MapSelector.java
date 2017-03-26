@@ -41,7 +41,7 @@ public class MapSelector extends FragmentActivity implements OnMapReadyCallback 
         // Add a marker in Sydney and move the camera
         LatLng corv = new LatLng(44.5646, -123.2620);
         mMap.addMarker(new MarkerOptions().position(corv).title("Corvallis"));
-        float zoomLevel = 16.0; //This goes up to 21
+        float zoomLevel = 16; //This goes up to 21
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(corv, zoomLevel));
     }
 }
