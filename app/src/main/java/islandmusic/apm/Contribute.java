@@ -13,7 +13,7 @@ public class Contribute extends AppCompatActivity {
 }
 
 /** Called when the user clicks the Looking button*/
- public void launchLook(View view) {
+ public void launchPicture(View view) {
  Intent intent = new Intent(this, ContPhotoActivity.class);
  startActivity(intent);
 

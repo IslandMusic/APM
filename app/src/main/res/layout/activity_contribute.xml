@@ -30,7 +30,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="118dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="launchPicture"/>
 
     <Button
         android:text="@string/btn_video"
