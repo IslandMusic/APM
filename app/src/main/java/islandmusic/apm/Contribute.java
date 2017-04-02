@@ -11,3 +11,10 @@ public class Contribute extends AppCompatActivity {
         setContentView(R.layout.activity_contribute);
     }
 }
+
+/** Called when the user clicks the Looking button*/
+ public void launchLook(View view) {
+ Intent intent = new Intent(this, ContPhotoActivity.class);
+ startActivity(intent);
+
+ }
