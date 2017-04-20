@@ -20,4 +20,3 @@ public class Contribute extends AppCompatActivity {
 
     }
 }
-
