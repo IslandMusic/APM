@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context="islandmusic.apm.ContPhotoActivity">
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_gallery"
+        android:id="@+id/btn_gallery"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="118dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="launchGallery"/>
+
 </android.support.constraint.ConstraintLayout>
