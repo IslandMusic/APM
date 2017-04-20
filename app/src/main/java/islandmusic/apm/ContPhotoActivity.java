@@ -14,9 +14,9 @@ public class ContPhotoActivity extends AppCompatActivity {
     }
 }
 
-    /** Called when the user clicks the Looking button
-    public void launchLook(View view) {
-        Intent intent = new Intent(this, nope.class);
+    /** Called when the user clicks the Gallery button*/
+    public void launchGallery(View view) {
+        Intent intent = new Intent(this, Gallery.class);
         startActivity(intent);
 
-    }*/
+    }
