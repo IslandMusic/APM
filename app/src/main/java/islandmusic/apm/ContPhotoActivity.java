@@ -22,8 +22,6 @@ public class ContPhotoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cont_photo);
 
-        Intent intent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-        startActivityForResult(intent, 2);
 
     }
 
@@ -68,9 +66,21 @@ public class ContPhotoActivity extends AppCompatActivity {
 
     /** Called when the user clicks the Gallery button*/
     public void launchGallery(View view) {
-        Intent intent = new Intent(this, Gallery.class);
-        startActivity(intent);
 
+        // Create intent to Open Image applications like Gallery, Google Photos
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        // Start the Intent
+        startActivityForResult(galleryIntent, RESULT_LOAD_IMG);
+
+    }
+
+    public void loadImagefromGallery(View view) {
+        // Create intent to Open Image applications like Gallery, Google Photos
+        Intent galleryIntent = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        // Start the Intent
+        startActivityForResult(galleryIntent, RESULT_LOAD_IMG);
     }
 
 

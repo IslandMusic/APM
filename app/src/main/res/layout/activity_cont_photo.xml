@@ -8,20 +8,20 @@
 
     <ImageView
         android:id="@+id/imgView"
-        android:layout_width="fill_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1" >
+        android:layout_weight="1">
     </ImageView>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/btn_gallery"
         android:id="@+id/btn_gallery"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="118dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="launchGallery"/>
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:onClick="launchGallery"
+        tools:layout_editor_absoluteY="456dp"
+        tools:layout_editor_absoluteX="26dp" />
 
 </android.support.constraint.ConstraintLayout>
