@@ -1,27 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="islandmusic.apm.ContPhotoActivity">
-
-    <ImageView
-        android:id="@+id/imgView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
-    </ImageView>
+    android:orientation="vertical" >
 
     <Button
-        android:text="@string/btn_gallery"
         android:id="@+id/btn_gallery"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0"
-        android:onClick="launchGallery"
-        tools:layout_editor_absoluteY="456dp"
-        tools:layout_editor_absoluteX="26dp" />
+        android:text="@string/btn_gallery">
+    </Button>
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
