@@ -19,7 +19,8 @@
         android:text="@string/btn_look"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:onClick="launchLook"/>
+        android:onClick="launchLook"
+        android:fontFamily="cursive"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -28,7 +29,8 @@
         android:text="@string/btn_cont"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:onClick="launchCont"/>
+        android:onClick="launchCont"
+        android:fontFamily="monospace"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -38,6 +40,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="65dp"
-        android:onClick="launchAbout"/>
+        android:onClick="launchAbout"
+        android:fontFamily="casual"/>
 
 </RelativeLayout>

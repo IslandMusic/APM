@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:weightSum="1">
 
     <Button
         android:id="@+id/btn_gallery"
@@ -15,5 +16,23 @@
         android:id="@+id/imgView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_arright"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end"
+        android:text="@string/arright">
+
+    </Button>
+
+    <Button
+        android:id="@+id/btn_arleft"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="start"
+        android:text="@string/arleft">
+
+    </Button>
 
 </LinearLayout>

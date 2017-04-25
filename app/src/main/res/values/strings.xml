@@ -17,5 +17,7 @@
     <string name="app_start">The App is Starting…</string>
     <string name="title_activity_maps">Map</string>
     <string name="btn_gallery">Gallery</string>
+    <string name="arright"> &gt; </string>
+    <string name="arleft"> &lt; </string>
 
 </resources>
