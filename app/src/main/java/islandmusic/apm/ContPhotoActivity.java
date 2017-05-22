@@ -71,13 +71,23 @@ public class ContPhotoActivity extends AppCompatActivity {
      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
          super.onActivityResult(requestCode, resultCode, data);
          if (resultCode == RESULT_OK && requestCode == RESULT_LOAD_IMG) {
-             Uri imageUri = data.getData();
-             imageView.setImageURI(imageUri);
+             Intent intent = new Intent(ContPhotoActivity.this,S3Upload.class);
+
+/*
+
+       //      Uri imageUri = data.getData();
+      //      imageView.setImageURI(imageUri);
 
              //Summons a AWS credentialsProvider to carry your image
              AmazonS3 s3 = new AmazonS3Client(credentialsProvider);
              TransferUtility transferUtility = new TransferUtility(s3, getApplicationContext());
 
+    //         TransferObserver observer = transferUtility.upload(
+    //                 MY_BUCKET,     /* The bucket to upload to */
+   //                  OBJECT_KEY,    /* The key for the uploaded object */
+   //                  MY_FILE        /* The file where the data to upload exists */
+  //           );
+/*
              // Initialize the Amazon Cognito credentials provider
              CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(
                      getApplicationContext(),
@@ -98,7 +108,7 @@ public class ContPhotoActivity extends AppCompatActivity {
                  public void onSuccess(Dataset dataset, List newRecords) {
                      //Your handler code here
                  }
-             });
+             }); */
          }
      }
 }

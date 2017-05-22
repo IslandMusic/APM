@@ -19,5 +19,6 @@
     <string name="btn_gallery">Gallery</string>
     <string name="arright"> &gt; </string>
     <string name="arleft"> &lt; </string>
+    <string name="title_activity_s3_upload">S3Upload</string>
 
 </resources>
