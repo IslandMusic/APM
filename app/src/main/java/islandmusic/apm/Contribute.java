@@ -10,8 +10,7 @@ public class Contribute extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contribute);
-    }
+        setContentView(R.layout.activity_contribute); }
 
     /** Called when the user clicks the Looking button*/
     public void launchPicture(View view) {

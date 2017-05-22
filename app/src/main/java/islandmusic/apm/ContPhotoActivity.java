@@ -14,9 +14,16 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.widget.Toast;
 
+import com.amazonaws.ClientConfiguration;
+import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
+import com.amazonaws.services.s3.AmazonS3;
+import com.amazonaws.services.s3.AmazonS3Client;
+
 public class ContPhotoActivity extends AppCompatActivity {
     private static int RESULT_LOAD_IMG = 1;
     private ImageView imageView;
+    AWSCredentialsProvider credentialsProvider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +65,10 @@ public class ContPhotoActivity extends AppCompatActivity {
          if (resultCode == RESULT_OK && requestCode == RESULT_LOAD_IMG) {
              Uri imageUri = data.getData();
              imageView.setImageURI(imageUri);
+
+             //Summons a AWS credentialsProvider to carry your image
+             AmazonS3 s3 = new AmazonS3Client(credentialsProvider);
+             TransferUtility transferUtility = new TransferUtility(s3, getApplicationContext());
          }
      }
 }
