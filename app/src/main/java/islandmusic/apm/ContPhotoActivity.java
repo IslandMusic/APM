@@ -16,13 +16,21 @@ import android.widget.Toast;
 
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.auth.AWSCredentialsProvider;
+import com.amazonaws.auth.CognitoCachingCredentialsProvider;
+import com.amazonaws.mobileconnectors.cognito.CognitoSyncManager;
+import com.amazonaws.mobileconnectors.cognito.Dataset;
+import com.amazonaws.mobileconnectors.cognito.DefaultSyncCallback;
 import com.amazonaws.mobileconnectors.s3.transferutility.TransferUtility;
+import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
+
+import java.util.List;
 
 public class ContPhotoActivity extends AppCompatActivity {
     private static int RESULT_LOAD_IMG = 1;
     private ImageView imageView;
+    //May need fixing or removal
     AWSCredentialsProvider credentialsProvider;
 
     @Override
@@ -69,6 +77,28 @@ public class ContPhotoActivity extends AppCompatActivity {
              //Summons a AWS credentialsProvider to carry your image
              AmazonS3 s3 = new AmazonS3Client(credentialsProvider);
              TransferUtility transferUtility = new TransferUtility(s3, getApplicationContext());
+
+             // Initialize the Amazon Cognito credentials provider
+             CognitoCachingCredentialsProvider credentialsProvider = new CognitoCachingCredentialsProvider(
+                     getApplicationContext(),
+                     "us-west-2:d18d3245-afb8-4bba-b010-d38eef72d706", // Identity Pool ID
+                     Regions.US_WEST_2 // Region
+             );
+             // Initialize the Cognito Sync client
+             CognitoSyncManager syncClient = new CognitoSyncManager(
+                     getApplicationContext(),
+                     Regions.US_WEST_2, // Region
+                     credentialsProvider);
+
+            // Create a record in a dataset and synchronize with the server
+             Dataset dataset = syncClient.openOrCreateDataset("myDataset");
+             dataset.put("myKey", "myValue");
+             dataset.synchronize(new DefaultSyncCallback() {
+                 @Override
+                 public void onSuccess(Dataset dataset, List newRecords) {
+                     //Your handler code here
+                 }
+             });
          }
      }
 }
