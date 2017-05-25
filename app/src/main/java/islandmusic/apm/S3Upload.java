@@ -35,13 +35,18 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import java.net.URI;
 import java.util.List;
 
+import static islandmusic.apm.R.id.imgView;
+
 public class S3Upload extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_s3_upload);
-        ImageView imageview = (ImageView)findViewById(R.id.imgView);
+        String s = getIntent().getStringExtra("image_data");
+        Uri imageUri = getIntent().getData();
+        ImageView imageview = (ImageView)findViewById(R.id.s3upload);
+
 
     }
 

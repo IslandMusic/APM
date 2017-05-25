@@ -25,11 +25,15 @@ import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 
+import java.io.File;
+import java.net.URI;
 import java.util.List;
+
 
 public class ContPhotoActivity extends AppCompatActivity {
     private static int RESULT_LOAD_IMG = 1;
-    private ImageView imageView;
+    public ImageView imageView;
+    public URI myfileuri = null;
     //May need fixing or removal
     AWSCredentialsProvider credentialsProvider;
 
@@ -71,13 +75,16 @@ public class ContPhotoActivity extends AppCompatActivity {
      protected void onActivityResult(int requestCode, int resultCode, Intent data) {
          super.onActivityResult(requestCode, resultCode, data);
          if (resultCode == RESULT_OK && requestCode == RESULT_LOAD_IMG) {
-             Intent intent = new Intent(ContPhotoActivity.this,S3Upload.class);
+             Uri imageUri = data.getData();
+             imageView.setImageURI(imageUri);
+             Intent intent = new Intent(this,S3Upload.class);
+             intent.putExtra("image_data",imageUri);
+             startActivity(intent);
+
+
+
 
 /*
-
-       //      Uri imageUri = data.getData();
-      //      imageView.setImageURI(imageUri);
-
              //Summons a AWS credentialsProvider to carry your image
              AmazonS3 s3 = new AmazonS3Client(credentialsProvider);
              TransferUtility transferUtility = new TransferUtility(s3, getApplicationContext());
