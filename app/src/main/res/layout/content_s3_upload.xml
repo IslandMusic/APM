@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Imageview xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id = "@+id/s3upload"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id = "@+id/s3upload"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+    <ImageView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="islandmusic.apm.S3Upload"
-    tools:showIn="@layout/activity_s3_upload">
-
-</Imageview>
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="fff" />
+</LinearLayout>

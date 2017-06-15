@@ -38,18 +38,16 @@ import java.util.List;
 import static islandmusic.apm.R.id.imgView;
 
 public class S3Upload extends AppCompatActivity {
-
+    public ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_s3_upload);
         String s = getIntent().getStringExtra("image_data");
         Uri imageUri = getIntent().getData();
-        ImageView.setImageURI(imageUri);
+      // ImageView.setImageURI(imageUri);
 
 
     }
-
-}
 
 }
