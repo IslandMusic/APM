@@ -2,6 +2,7 @@ package islandmusic.apm;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3Client;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 import java.util.List;
 
@@ -81,7 +83,11 @@ public class ContPhotoActivity extends AppCompatActivity {
              cursor.moveToFirst();
              int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
              String filePath = cursor.getString(columnIndex);
-             imageUri = BitmapFactory.decodeFile(filePath);
+             try {
+                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
+             } catch (IOException e) {
+                 e.printStackTrace();
+             }
              cursor.close();
              imageView.setImageURI(imageUri);
              Intent intent = new Intent(this,S3Upload.class);

@@ -45,9 +45,11 @@ public class S3Upload extends AppCompatActivity {
         setContentView(R.layout.content_s3_upload);
         String s = getIntent().getStringExtra("image_data");
         Uri imageUri = getIntent().getData();
-        ImageView imageview = (ImageView)findViewById(R.id.s3upload);
+        ImageView.setImageURI(imageUri);
 
 
     }
+
+}
 
 }
