@@ -78,7 +78,7 @@ public class ContPhotoActivity extends AppCompatActivity {
          super.onActivityResult(requestCode, resultCode, data);
          if (resultCode == RESULT_OK && requestCode == RESULT_LOAD_IMG) {
              Uri imageUri = data.getData();
-             String [] filePathColumn = {MediaStore.Images.Media.DATA};
+            /* String [] filePathColumn = {MediaStore.Images.Media.DATA};
              Cursor cursor = getContentResolver().query(imageUri, filePathColumn, null, null, null);
              cursor.moveToFirst();
              int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
@@ -88,11 +88,18 @@ public class ContPhotoActivity extends AppCompatActivity {
              } catch (IOException e) {
                  e.printStackTrace();
              }
-             cursor.close();
+          //   cursor.close(); */
              imageView.setImageURI(imageUri);
-             Intent intent = new Intent(this,S3Upload.class);
+             Intent intent = new Intent(Intent.ACTION_VIEW);
+             intent .setClass(ContPhotoActivity.this,S3Upload.class);
+             intent .putExtra("image_data", imageUri);
+             startActivity(intent );
+
+             /*startActivity(intent);
+             Intent intent = new Intent(ContPhotoActivity.this,S3Upload.class);
              intent.putExtra("image_data",imageUri);
-             startActivity(intent);
+
+
 
 
 

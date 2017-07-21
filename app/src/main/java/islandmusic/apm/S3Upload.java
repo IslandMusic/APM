@@ -43,8 +43,12 @@ public class S3Upload extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_s3_upload);
-        String s = getIntent().getStringExtra("image_data");
-        Uri imageUri = getIntent().getData();
+        Uri imageUri;
+        String stringUri = new String();
+        imageUri = Uri.parse(stringUri);
+        Bundle extras = getIntent().getExtras();
+        if (extras != null && extras.containsKey("image_data"))
+     //   Uri imageUri = getIntent().getData();
       imageView.setImageURI(imageUri);
 
 
